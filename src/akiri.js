@@ -23,7 +23,7 @@ exports.sendData = async function (url, data) {
     body: JSON.stringify(data),
     headers: {
       "Content-Type": "application/json",
-    },
+    }
   });
   let json= await resp.json();
     return json;
