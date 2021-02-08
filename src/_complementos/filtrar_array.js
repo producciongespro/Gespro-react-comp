@@ -24,15 +24,16 @@ exports.filtrarKey =  function (array, llave, valor, metodo) {
     return tmpData;
 }
 
-exports.filtrarId =  function (array, id) { 
+exports.filtrarId =  function (array, id) {     
+    //console.log("array recibido", array);
     const limite= array.length;
     let item=null;
     id= id.toString();
+    //console.log("id recibidia", id);
     for (let index = 0; index < limite; index++) {
-        if (array.id === id) {
+        if (array[index].id === id) {
             item = array[index]
-        }
-        
+        }        
     }
     return item;
 }
