@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './login.css';
 import {sendData} from '../../_complementos/akiri';
-const URL_API_LOGIN = "http://localhost/ws-login/login.php";
+const URL_API_LOGIN = "http://localhost/rpGespro/webservices/login/login.php";
 
 
 
