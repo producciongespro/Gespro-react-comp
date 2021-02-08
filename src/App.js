@@ -1,3 +1,5 @@
+import ContLogin from './componentes/Login/ContLogin';
+
 function App() {
   return (
     <div className="container">
@@ -8,6 +10,7 @@ function App() {
           Funciones JS y componentes React JS
         </p>
       </div>
+      <ContLogin />
     </div>
   );
 }
