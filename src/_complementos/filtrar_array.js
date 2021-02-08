@@ -1,5 +1,5 @@
-export default function filtrarKey (array, llave, valor, metodo ) {  
-    
+
+exports.filtrarKey =  function (array, llave, valor, metodo) {    
     valor = valor.toString();
     
     //console.log("*********Filtro por criterio llave", llave);    
@@ -22,4 +22,17 @@ export default function filtrarKey (array, llave, valor, metodo ) {
     }
     //console.log("Arreglo retornado", tmpData);    
     return tmpData;
+}
+
+exports.filtrarId =  function (array, id) { 
+    const limite= array.length;
+    let item=null;
+    id= id.toString();
+    for (let index = 0; index < limite; index++) {
+        if (array.id === id) {
+            item = array[index]
+        }
+        
+    }
+    return item;
 }

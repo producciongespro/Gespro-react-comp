@@ -1,4 +1,5 @@
-import ContLogin from './componentes/Login/ContLogin';
+//import ContLogin from './componentes/Login/ContLogin';
+import ContTarjetas from './componentes/Tarjetas/ContTarjetas';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
           Funciones JS y componentes React JS
         </p>
       </div>
-      <ContLogin />
+      <ContTarjetas />
     </div>
   );
 }
