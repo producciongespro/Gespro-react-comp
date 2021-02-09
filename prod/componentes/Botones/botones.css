@@ -1,0 +1,82 @@
+.bloque {
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.linea {
+    display: inline;
+    margin-right: 0.3em;
+}
+
+.btn-custom:active {
+	position:relative;
+	top:1px;
+}
+
+
+.btn-twitter {
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:6px;
+	border:1px solid #057fd0;	
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+
+.btn-twitter:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+
+
+
+.btn-round {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;	
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.btn-round:hover {
+	background-color:#5cbf2a;
+}
+
+
+.btn-grass {
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;	
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+.btn-grass:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+}	
+
+.btn-seleccionado {
+	background:linear-gradient(to bottom, #8000ff 5%, #bf00ff 100%);	
+}
+
+
+
+
