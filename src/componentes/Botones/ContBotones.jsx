@@ -1,33 +1,23 @@
-import React, { useRef } from "react";
 import Botones from "./Botones";
 import ejBotones from "./ej_botones.json";
 
-export default function ContBotones() {
-  const refBotones = useRef();
-  refBotones.current = [];
+export default function ContBotones() {  
 
-  const agregarRefBotones = (item) => {
-    refBotones.current.push(item);
-    console.log(refBotones.current);
-  };
 
-  // colores: azul, naranja, verde, crema
+  // estilos: twitter, round, grass
+  // orienta: linea, bloque
   const conf = {
-    orienta: "linea",
-    color: "crema",
+    orienta: "bloque",
+    estilo: "round",
   };
 
-  const handleSeleccionarBtn = (i) => {
-    const btn= refBotones.current[i];
-    console.log(btn);
-    btn.classList.add("btn-seleccionado");
+  const handleSeleccionarBtn = (i) => {    
     const item = ejBotones[i];
     console.log("Posición ", i, "Item:", item);
   };
 
   return (
-    <Botones
-      agregarRefBotones={agregarRefBotones}
+    <Botones      
       conf={conf}
       array={ejBotones}
       handleSeleccionarBtn={handleSeleccionarBtn}
