@@ -1,7 +1,8 @@
 //import ContLogin from './componentes/Login/ContLogin';
 //import ContTarjetas from './componentes/Tarjetas/ContTarjetas';
 //import ContBotones from "./componentes/Botones/ContBotones";
-import ContTabla from "./componentes/Tabla/ContTabla";
+//import ContTabla from './componentes/Tabla/ContTabla';
+import ContBuscador from './componentes/Buscador/ContBuscador';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
           Funciones JS y componentes React JS
         </p>
       </div>
-      <ContTabla />      
+      <ContBuscador />      
     </div>
   );
 }
