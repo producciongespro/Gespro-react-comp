@@ -1,5 +1,7 @@
 //import ContLogin from './componentes/Login/ContLogin';
-import ContTarjetas from './componentes/Tarjetas/ContTarjetas';
+//import ContTarjetas from './componentes/Tarjetas/ContTarjetas';
+import ContBotones from "./componentes/Botones/ContBotones";
+
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
           Funciones JS y componentes React JS
         </p>
       </div>
-      <ContTarjetas />
+      <ContBotones />
     </div>
   );
 }

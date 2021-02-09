@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "nombre": "Sección 1",
+        "detalles": "detalle secicón 1"
+    },
+    {
+        "id": 2,
+        "nombre": "Sección 2",
+        "detalles": "detalle secicón 2"
+    },
+    {
+        "id": 3,
+        "nombre": "Sección 3",
+        "detalles": "detalle secicón 3"
+    },
+    {
+        "id": 4,
+        "nombre": "Sección 4",
+        "detalles": "detalle secicón 4"
+    }
+]
