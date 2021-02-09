@@ -11,6 +11,7 @@ export default function Botones(props) {
         className={establecerClase(props.conf)} 
         key={i}
         onClick={()=> props.handleSeleccionarBtn(i) }
+        ref={props.agregarRefBotones}
         >
       {item.nombre}
     </button>
