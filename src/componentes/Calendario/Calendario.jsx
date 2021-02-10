@@ -1,21 +1,17 @@
-import CeldaDias from './CeldasDias';
+import CeldaDias from "./CeldasDias";
+import EncabezadoCal from "./EncabezadoCal";
 
+export default function Calendario() {
+  const hoy = {
+    dia: 10,
+    mes: 2,
+    anno: 2021,
+  };
 
-export default function Calendario () {
-
-    const hoy={
-        dia: 10,
-        mes: 2,
-        anno: 2021
-    }
-
-    return (
-        <div className="row">
-            <div className="col-sm-12">
-                <CeldaDias hoy={hoy} idMes="2" />
-            </div>
-        </div>
-    )
-    
+  return (
+    <>
+      <EncabezadoCal hoy={hoy} />
+      <CeldaDias hoy={hoy} idMes="2" />
+    </>
+  );
 }
-
