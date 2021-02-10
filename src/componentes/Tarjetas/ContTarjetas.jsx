@@ -18,7 +18,9 @@ export default function ContTarjetas() {
     const conf= {
         "img": true, //Si contienes imagenes  img=true
         "col": "sm-4", //Columna boostrap
-        "hx": 5 //tamaño del títitulo (1 - 6) Ej si es (h1) hx= 1
+        "hx": 5, //tamaño del títitulo (1 - 6) Ej si es (h1) hx= 1
+        "titulo": "titulo", // nombre del campo con la iformación que se depliega en el título de la tarjeta
+        "descripcion": "descripcion" //nombre del campo de la descripción
     }
 
     return (

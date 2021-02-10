@@ -35,16 +35,16 @@ export default function Tarjetas(props) {
         <div key={"tarjetaColumna" + i} className={"col-" + conf.col}>
           <div className="card pb-2 mb-4 ">
             <div className="card-header text-center">
-              {JsxTitulo(conf.hx, item.titulo)}
+              {JsxTitulo(conf.hx, item[conf.titulo] )}
             </div>
             {conf.img && (
               <img
                 src={"./assets/" + item.urlImg}
                 className="img-fluid"
-                alt={"imagen previa de " + item.titulo}
+                alt={"imagen previa de " + item[conf.titulo] }
               />
             )}
-            <div className="card-body">{item.descripcion}</div>
+            <div className="card-body">{item[conf.descripcion]  }</div>
             <div className="card-footer">
               <button
                 id={item.id}
