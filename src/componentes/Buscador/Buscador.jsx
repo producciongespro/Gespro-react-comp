@@ -1,11 +1,11 @@
-//import React, { useState } from 'react';
 import { buscar } from "../../_complementos/buscador";
 
 export default function Buscador(props) {
   const handleBuscar = (e) => {
     let palabra= e.target.value;
      let filtrados=  buscar(palabra, props.array );
-     console.log("filtrados", filtrados);
+     //console.log("filtrados", filtrados);
+     props.obtenerFiltrados(filtrados);
   };
 
   return (
