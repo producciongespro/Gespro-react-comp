@@ -1,13 +1,15 @@
 export default function Tabla(props) {
   let claseBoostrap = "table ";
-  props.conf.oscura && (claseBoostrap = claseBoostrap + " table-dark ");
-  props.conf.alterna && (claseBoostrap = claseBoostrap + " table-striped ");
+  const conf = props.conf;
+  conf.oscura && (claseBoostrap = claseBoostrap + " table-dark ");
+  conf.alterna && (claseBoostrap = claseBoostrap + " table-striped ");
   console.log(claseBoostrap);
 
   return (
     <table className={claseBoostrap}>
       <thead>
         <tr>
+          {conf.indice && <th scope="col"> # </th>}
           {props.encabezado.map((item, i) => (
             <th key={i} scope="col">
               {item}
@@ -20,10 +22,10 @@ export default function Tabla(props) {
       <tbody>
         {props.array.map((item, i) => (
           <tr key={i}>
-            <th scope="row"> {i + 1} </th>
-            <td> {item.nombre} </td>
-            <td> {item.nivel} </td>
-            <td> {item.responsable} </td>
+            {conf.indice && <th scope="row"> {i + 1} </th>}
+            <td> {item[conf.col1]} </td>
+            <td> {item[conf.col2]} </td>
+            <td> {item[conf.col3]} </td>
             <td className="text-center">
               <button
                 onClick={() => props.handleVerDetalles(i)}
@@ -33,11 +35,12 @@ export default function Tabla(props) {
               </button>
             </td>
             <td className="text-center">
-              <button 
-              id={item.id} 
-              onClick={ props.handleEliminar }
-              className="btn btn-info btn-sm px-3">
-              ✏️
+              <button
+                id={item.id}
+                onClick={props.handleEliminar}
+                className="btn btn-info btn-sm px-3"
+              >
+                ✏️
               </button>
             </td>
           </tr>

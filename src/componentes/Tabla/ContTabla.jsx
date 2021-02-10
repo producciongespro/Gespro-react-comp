@@ -3,10 +3,15 @@ import ejTabla from "./ej_tabla.json";
 
 export default function ContTabla() {
   //Títulos de tabla
-  const encabezado = ["#", "Nombre", "Nivel", "Responsable"];
+  const encabezado = ["Nombre", "Nivel", "Responsable"];
+  
   const conf = {
     alterna: false,
     oscura: false,
+    indice: true,
+    col1: "nombre",
+    col2: "nivel",
+    col3: "responsable"
   };
 
   const handleVerDetalles = (i) => {

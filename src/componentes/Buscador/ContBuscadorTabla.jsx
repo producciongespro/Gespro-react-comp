@@ -10,10 +10,15 @@ export default function ContBusador() {
     setFiltrados(f);
   };
 
-  const encabezado = ["#", "Nombre", "Nivel", "Responsable"];
+  const encabezado = [ "Nombre", "Nivel", "Responsable"];
+  
   const conf = {
-    alterna: false,
-    oscura: false,
+    alterna: true,
+    oscura: true,
+    indice: false,
+    col1: "nombre",
+    col2: "nivel",
+    col3: "responsable"
   };
 
   const handleVerDetalles = (i) => {
