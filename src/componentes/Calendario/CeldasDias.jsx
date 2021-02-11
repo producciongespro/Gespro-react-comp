@@ -6,6 +6,7 @@ import "./celda_dias.css";
 export default function CeldasDias(props) {
   let mesMontado = filtrarId(meses, props.idMes);
   var consecutivo = [];
+  const claseTamano= "cal-" + props.conf.t;
 
   const handlerSelectDia = (e) => {
     let id = e.target.id;
@@ -44,7 +45,7 @@ export default function CeldasDias(props) {
         id={mesMontado.renderMes + item}
         onClick={handlerSelectDia}
         onKeyPress={handlerSelectDia}
-        className={claseCelda}
+        className={claseCelda + " " + claseTamano}
         role="button"
         ref={props.agregarRefs}
       >
@@ -61,7 +62,7 @@ export default function CeldasDias(props) {
         id={mesMontado.renderMes + "0" + item}
         onClick={handlerSelectDia}
         onKeyPress={handlerSelectDia}
-        className={claseCelda}
+        className={claseCelda + " " + claseTamano}
         role="button"
         ref={props.agregarRefs}
       >
@@ -80,7 +81,7 @@ export default function CeldasDias(props) {
       <div className="contenedor fondo-calendario">
         <div className="row">
           {dias.map((item) => (
-            <div key={"dia" + item.id} className="fila-dias">              
+            <div key={"dia" + item.id} className={"fila-dias " + claseTamano}>              
               {item.nombre}
             </div>
           ))}

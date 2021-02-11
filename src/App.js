@@ -18,7 +18,11 @@ function App() {
           Funciones JS y componentes React JS
         </p>
       </div>
-      <Calendario />      
+      <div className="row">
+        <div className="col-6">
+        <Calendario />      
+        </div>
+      </div>
     </div>
   );
 }

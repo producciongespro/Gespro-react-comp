@@ -2,8 +2,7 @@
 .celda {
     width:13%;
     height: 2.1em;         
-    margin-right: 1%;
-    font-size: 2em;
+    margin-right: 1%;    
     text-align: center;
     font-weight: bold;
     margin-bottom: 2px;
@@ -30,8 +29,7 @@ Cambia la celda cuando es la fecha de hoy, colocarle un subrayado
     width:13%;
     height: 2.1em;     
     text-align: center;
-    margin-right: 1%;
-    font-size: 2em;
+    margin-right: 1%;    
     margin-bottom: 2px;
     padding-top: 12px;
     cursor: pointer;    
@@ -63,8 +61,7 @@ Cambia la celda cuando es la fecha de hoy, colocarle un subrayado
     width:13%;    
     height: 1.5em; 
     text-align: center;
-    margin-right: 1%;
-    font-size: 2em;
+    margin-right: 1%;    
     font-weight: bold;    
     background-color: transparent;
     color:#ED1967;
@@ -77,4 +74,16 @@ Cambia la celda cuando es la fecha de hoy, colocarle un subrayado
 
 .emoji-l {
     font-size: 1.5em; 
+}
+
+.cal-s {
+    font-size: 0.8em;
+}
+
+.cal-m {
+    font-size: 1em;
+}
+
+.cal-l {
+    font-size: 2em;
 }

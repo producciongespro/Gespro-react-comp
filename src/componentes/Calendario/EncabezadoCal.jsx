@@ -1,26 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { filtrarId } from "../../_complementos/filtrar_array";
 import meses from "./meses.json";
-
 let idMesActual;
+const limiteMeses = meses.length;
 
-export default function EncabezadoCal(props) {
-  const [mesActual, setMesActual] = useState(filtrarId(meses, props.hoy.mes));
-  const limiteMeses = meses.length;
-  console.log("limiteMeses", limiteMeses);
 
-  console.log("idMesActual des funcion------>",idMesActual);
+export default function EncabezadoCal(props) { 
+  const [mesActual, setMesActual] = useState(null );    
 
   useEffect(()=>{
     idMesActual = props.hoy.mes;
-  },[])
+    setMesActual(filtrarId(meses, props.hoy.mes) )
+  },[]);
+
+  useEffect (()=>{
+    props.obtenerMes(idMesActual, mesActual  )
+  },[mesActual])
 
   const handlePasarMeses = (e) => {
     const id = e.target.id;
     id === "btnAtras" && idMesActual > 1 && idMesActual--;
-    id === "btnAdelante" && idMesActual < limiteMeses && idMesActual++;
-    console.log("idMesActual pasar////",idMesActual);    
-    setMesActual(filtrarId(meses, idMesActual));
+    id === "btnAdelante" && idMesActual < limiteMeses && idMesActual++;    
+    setMesActual(filtrarId(meses, idMesActual));    
   };
 
   return (
@@ -34,7 +35,7 @@ export default function EncabezadoCal(props) {
         ◀️
       </div>
       <div className="col-sm-8 text-center">
-        <h2> {mesActual.titulo} </h2>
+        <h2> {mesActual && mesActual.titulo} </h2>
       </div>
       <div
         onClick={handlePasarMeses}
