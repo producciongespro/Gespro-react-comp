@@ -3,7 +3,7 @@ import array from "./ej_tabla.json";
 
 export default function ContBusador() {
   const obtenerFiltrados = (f) => {
-    console.log("Filtrados", f);
+    console.log("Filtrados---->", f);
   };
 
   return (

@@ -6,7 +6,7 @@ import array from "./ej_tabla.json";
 
 export default function ContBusador() {
   const [filtrados, setFiltrados] = useState(array);
-
+  
   const obtenerFiltrados = (f) => {
     setFiltrados(f);
   };
