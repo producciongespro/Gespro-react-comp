@@ -5,7 +5,7 @@ import ContTabla from './componentes/Tabla/ContTabla';
 import ContBuscador from './componentes/Buscador/ContBuscador';
 import ContBuscadorTarjetas from './componentes/Buscador/ContBuscadorTarjetas';
 import ContBuscadorTabla from './componentes/Buscador/ContBuscadorTabla';
-import Calendario from './componentes/Calendario/Calendario';
+import ContCalendario from './componentes/Calendario/ContCalendario';
 
 
 function App() {
@@ -17,12 +17,8 @@ function App() {
         <p>
           Funciones JS y componentes React JS
         </p>
-      </div>
-      <div className="row">
-        <div className="col-6">
-        <Calendario />      
-        </div>
-      </div>
+      </div>      
+        <ContCalendario />            
     </div>
   );
 }

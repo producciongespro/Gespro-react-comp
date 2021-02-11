@@ -17,6 +17,14 @@ export default function fecha(params) {
         case "dia":
             retorno= date.getDate();
         break;
+        case "objHoy": 
+            retorno = {
+                dia:  date.getDate(),
+                mes: date.getMonth()+1,
+                anno: date.getFullYear(),
+            }
+
+        break;
     
         default:
             retorno="opción descnocida"
