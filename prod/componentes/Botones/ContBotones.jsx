@@ -1,25 +1,27 @@
 import Botones from "./Botones";
-import ejBotones from "./ej_botones.json";
-
-export default function ContBotones() {  
-
+import array from "./ej_botones.json";
 
   // estilos: twitter, round, grass
   // orienta: linea, bloque
   const conf = {
-    orienta: "bloque",
-    estilo: "round",
+    orienta: "linea",
+    estilo: "grass",
   };
 
   const handleSeleccionarBtn = (i) => {    
-    const item = ejBotones[i];
+    const item = array[i];
     console.log("Posición ", i, "Item:", item);
   };
+
+
+
+
+export default function ContBotones() {  
 
   return (
     <Botones      
       conf={conf}
-      array={ejBotones}
+      array={array}
       handleSeleccionarBtn={handleSeleccionarBtn}
     />
   );

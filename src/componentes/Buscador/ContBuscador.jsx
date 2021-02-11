@@ -1,11 +1,11 @@
 import Buscador from "./Buscador";
 import array from "./ej_tabla.json";
 
-export default function ContBusador() {
-  const obtenerFiltrados = (f) => {
-    console.log("Filtrados---->", f);
-  };
+const obtenerFiltrados = (f) => {
+  console.log("Filtrados---->", f);
+};
 
+export default function ContBusador() {
   return (
     <div className="row">
       <div className="col-sm-12">

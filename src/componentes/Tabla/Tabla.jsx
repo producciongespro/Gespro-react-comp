@@ -1,16 +1,19 @@
+let claseBoostrap = "table ";
+
+
 export default function Tabla(props) {
-  let claseBoostrap = "table ";
+  
   const conf = props.conf;
   conf.oscura && (claseBoostrap = claseBoostrap + " table-dark ");
   conf.alterna && (claseBoostrap = claseBoostrap + " table-striped ");
-  console.log(claseBoostrap);
+  //console.log(claseBoostrap);
 
   return (
     <table className={claseBoostrap}>
       <thead>
         <tr>
           {conf.indice && <th scope="col"> # </th>}
-          {props.encabezado.map((item, i) => (
+          {props.conf.encabezado.map((item, i) => (
             <th key={i} scope="col">
               {item}
             </th>

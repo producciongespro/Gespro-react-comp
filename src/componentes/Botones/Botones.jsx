@@ -1,6 +1,22 @@
 import React, { useRef } from 'react';
 import "./botones.css";
 
+
+const eliminarClaseSelect=(array)=> {
+  const limite= array.length;
+  for (let index = 0; index < limite; index++) {      
+    array[index ].classList.remove("btn-seleccionado");      
+  }
+}
+
+
+const establecerClase = (conf) => {
+  const clase = "btn-" + conf.estilo + " " + conf.orienta;
+  return clase;
+};
+
+
+
 export default function Botones(props) {
   const refBotones = useRef();
   refBotones.current = [];
@@ -19,18 +35,6 @@ export default function Botones(props) {
     props.handleSeleccionarBtn(i);
   }
 
-  const eliminarClaseSelect=(array)=> {
-    const limite= array.length;
-    for (let index = 0; index < limite; index++) {      
-      array[index ].classList.remove("btn-seleccionado");      
-    }
-  }
-
-
-  const establecerClase = (conf) => {
-    const clase = "btn-" + conf.estilo + " " + conf.orienta;
-    return clase;
-  };
 
   return props.array.map((item, i) => (
     <button 
