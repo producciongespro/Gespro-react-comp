@@ -8,9 +8,9 @@ import array from "./ej_botones.json";
     estilo: "round",
   };
 
-  const handleSeleccionarBtn = (i) => {    
-    const item = array[i];
-    console.log("Posición ", i, "Item:", item);
+  const getBtn = ( item ) => {
+    //Obtiene el botón seleccionado:        
+    console.log( "Item:", item);
   };
 
 
@@ -22,7 +22,7 @@ export default function ContBotones() {
     <Botones      
       conf={conf}
       array={array}
-      handleSeleccionarBtn={handleSeleccionarBtn}
+      getBtn={getBtn}
     />
   );
 }

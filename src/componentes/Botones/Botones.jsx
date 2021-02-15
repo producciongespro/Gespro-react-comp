@@ -23,7 +23,7 @@ export default function Botones(props) {
 
   const agregarRefBotones = (item) => {
     refBotones.current.push(item);
-    console.log(refBotones.current);
+    //console.log(refBotones.current);
   };
 
   const handleSeleccionarBtn=(i)=> {
@@ -32,7 +32,7 @@ export default function Botones(props) {
     const btn= refBotones.current[i];
     //console.log(btn);
     btn.classList.add("btn-seleccionado");
-    props.handleSeleccionarBtn(i);
+    props.getBtn(props.array[i] );
   }
 
 

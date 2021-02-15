@@ -12,21 +12,19 @@ const conf = {
   col3: "responsable"
 };
 
-const handleVerDetalles = (i) => {
-  console.log("Posición del objeto", i);
-  console.log("Item:", array[i]);
+const getItem = (item) => {  
+  console.log("Item:", item);
 };
 
-const handleEliminar = (e) => {
-  const id = e.target.id;
+const getIdTitem = (id) => { 
   console.log("ID de Item a eliminar:", id);
 };
 
 export default function ContTabla() {
   return (
     <Tabla
-      handleVerDetalles={handleVerDetalles}
-      handleEliminar={handleEliminar}
+      getItem={getItem}
+      getIdTitem={getIdTitem}
       conf={conf}      
       array={array}
     />

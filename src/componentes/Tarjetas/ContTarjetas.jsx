@@ -1,9 +1,8 @@
 import Tarjetas from "./Tarjetas";
 import array from "./alimnetos.json";
 
-const handleObtenerDetalleTarjeta = (i) => {
- console.log(i);
- console.log(array[i]);
+const getItem = (item) => {
+  console.log(item);
 };
 
 const conf = {
@@ -15,11 +14,5 @@ const conf = {
 };
 
 export default function ContTarjetas() {
-  return (
-    <Tarjetas
-      handleObtenerDetalleTarjeta={handleObtenerDetalleTarjeta}
-      conf={conf}
-      array={array}
-    />
-  );
+  return <Tarjetas array={array} getItem={getItem} conf={conf} />;
 }

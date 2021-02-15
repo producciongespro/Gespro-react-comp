@@ -31,6 +31,11 @@ const JsxTitulo = (hx, texto) => {
 export default function Tarjetas(props) {
   const conf = props.conf;
 
+
+  const handleGetItem=(i)=> {
+    props.getItem( props.array[i]);
+  }
+
   return (
     <div className="row">
       {props.array.map((item, i) => (
@@ -50,7 +55,7 @@ export default function Tarjetas(props) {
             <div className="card-footer">
               <button
                 id={item.id}
-                onClick={ ()=> props.handleObtenerDetalleTarjeta(i) }
+                onClick={ ()=> handleGetItem(i) }
                 className="btn btn-info btn-block"
               >
                 👁️ Ver detalles
