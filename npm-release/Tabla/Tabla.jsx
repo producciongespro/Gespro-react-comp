@@ -19,7 +19,7 @@ export default function Tabla(props) {
             </th>
           ))}
           <th className="text-center">Ver</th>
-          <th className="text-center">Editar</th>
+          <th className="text-center">Eliminar</th>
         </tr>
       </thead>
       <tbody>
@@ -43,7 +43,7 @@ export default function Tabla(props) {
                 onClick={props.handleEliminar}
                 className="btn btn-info btn-sm px-3"
               >
-                ✏️
+                🗑️
               </button>
             </td>
           </tr>

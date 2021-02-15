@@ -4,11 +4,11 @@ import array from "./ej_tabla.json";
 
 const conf = {
   alterna: false,
-  oscura: false,
-  indice: true,
-  encabezado: ["Nombre", "Nivel", "Responsable"], //Títulos de tabla (Primera fila encabezado)
-  col1: "nombre", //nombre de campos de json
-  col2: "nivel",
+  oscura: true,
+  indice: false,
+  encabezado: ["Nivel", "Nombre", "Responsable"], //Títulos de tabla (Primera fila encabezado)
+  col1: "nivel", //nombre de campos de json
+  col2: "nombre",
   col3: "responsable"
 };
 

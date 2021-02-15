@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import CeldaDias from "./CeldasDias";
 import EncabezadoCal from "./EncabezadoCal";
-import fecha from '../../_complementos/fecha';
+import fecha from 'gespro-utils/fecha';
+
 
 //Parámetros fijos;
 let hoy = {

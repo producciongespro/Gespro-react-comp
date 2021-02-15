@@ -1,4 +1,4 @@
-import { buscar } from "../../_complementos/buscador";
+import { buscar } from 'gespro-utils/buscador';
 
 export default function Buscador(props) {
   console.log("props.array",props.array);

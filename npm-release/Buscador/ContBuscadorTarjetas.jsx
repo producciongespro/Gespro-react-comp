@@ -5,9 +5,8 @@ import array from "./ej_tabla.json";
 
 
 const handleObtenerDetalleTarjeta=(i)=> {
-  
-  console.log("Pos",id);  
-  console.log(item[i] );
+  console.log("Pos", i);  
+  console.log(  array[i]  );
 }
 
 

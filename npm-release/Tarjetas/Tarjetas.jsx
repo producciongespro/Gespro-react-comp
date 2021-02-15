@@ -48,8 +48,9 @@ export default function Tarjetas(props) {
             )}
             <div className="card-body">{item[conf.descripcion]}</div>
             <div className="card-footer">
-              <button                
-                onClick={()=> props.handleObtenerDetalleTarjeta(i) }
+              <button
+                id={item.id}
+                onClick={ ()=> props.handleObtenerDetalleTarjeta(i) }
                 className="btn btn-info btn-block"
               >
                 👁️ Ver detalles
