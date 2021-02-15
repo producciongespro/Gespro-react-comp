@@ -50,7 +50,7 @@ export default function Tarjetas(props) {
             <div className="card-footer">
               <button
                 id={item.id}
-                onClick={props.handleObtenerDetalleTarjeta}
+                onClick={ ()=> props.handleObtenerDetalleTarjeta(i) }
                 className="btn btn-info btn-block"
               >
                 👁️ Ver detalles

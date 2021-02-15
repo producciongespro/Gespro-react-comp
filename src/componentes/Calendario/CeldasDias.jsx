@@ -1,6 +1,6 @@
 import dias from "./dias.json";
 import meses from "./meses.json";
-import { filtrarId } from "../../_complementos/filtrar_array";
+import { filtrarId } from 'gespro-utils/filtrar_array';
 import "./celda_dias.css";
 
 export default function CeldasDias(props) {

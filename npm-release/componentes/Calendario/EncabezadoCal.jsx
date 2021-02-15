@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { filtrarId } from "../../_complementos/filtrar_array";
+import { filtrarId } from 'gespro-utils/filtrar_array';
 import meses from "./meses.json";
 let idMesActual;
 const limiteMeses = meses.length;

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './login.css';
-import {sendData} from '../../_complementos/akiri';
-const URL_API_LOGIN = "http://localhost/rpGespro/webservices/login/login.php";
+import {sendData} from 'gespro-utils/akiri';
+
 
 
 
@@ -21,7 +21,7 @@ export default function Login( props ) {
         }
         console.log("datos a enviar", data);      
 
-        const resp = await sendData (URL_API_LOGIN, data);
+        const resp = await sendData (props.urlApi, data);
         console.log("respuesta del servidor:" , resp);        
         setIsWait(false);
         resp.conectado && props.desbloquear(resp.conectado);                

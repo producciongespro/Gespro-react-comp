@@ -1,12 +1,9 @@
 import Tarjetas from "./Tarjetas";
-import { filtrarId } from "../../_complementos/filtrar_array";
 import array from "./alimnetos.json";
 
-const handleObtenerDetalleTarjeta = (e) => {
-  const id = e.target.id;
-  console.log(id);
-  let item = filtrarId(array, id);
-  console.log(item);
+const handleObtenerDetalleTarjeta = (i) => {  
+  console.log("Pos", id);  
+  console.log(array[i] );
 };
 
 const conf = {

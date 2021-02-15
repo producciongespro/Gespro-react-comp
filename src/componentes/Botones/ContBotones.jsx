@@ -5,7 +5,7 @@ import array from "./ej_botones.json";
   // orienta: linea, bloque
   const conf = {
     orienta: "linea",
-    estilo: "grass",
+    estilo: "round",
   };
 
   const handleSeleccionarBtn = (i) => {    

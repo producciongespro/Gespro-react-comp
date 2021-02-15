@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import Tarjetas from '../Tarjetas/Tarjetas';
-import {filtrarId} from '../../_complementos/filtrar_array';
 import Buscador from "./Buscador";
 import array from "./ej_tabla.json";
 
 
-const handleObtenerDetalleTarjeta=(e)=> {
-  const id= e.target.id;
-  console.log(id);
-  let item= filtrarId(array, id);
-  console.log(item);
+const handleObtenerDetalleTarjeta=(i)=> {
+  console.log("Pos", i);  
+  console.log(  array[i]  );
 }
 
 
