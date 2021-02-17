@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CeldaDias from "./CeldasDias";
 import EncabezadoCal from "./EncabezadoCal";
-import fecha from 'gespro-utils/fecha';
+import {fecha} from 'gespro-utils/fecha';
 
 
 //Parámetros fijos;
