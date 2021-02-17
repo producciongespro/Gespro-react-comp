@@ -7,9 +7,8 @@ const conf = {
   oscura: true,
   indice: false,
   encabezado: ["Nivel", "Nombre", "Responsable"], //Títulos de tabla (Primera fila encabezado)
-  col1: "nivel", //nombre de campos de json
-  col2: "nombre",
-  col3: "responsable"
+  campos: [ "nivel", "nombre", "responsable" ]  // Nombre de los cmapos del json
+  
 };
 
 const getItem = (item) => {  
