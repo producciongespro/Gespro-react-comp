@@ -21,9 +21,11 @@ export default function Botones(props) {
   const refBotones = useRef();
   refBotones.current = [];
 
-  const agregarRefBotones = (item) => {
-    refBotones.current.push(item);
-    //console.log(refBotones.current);
+   const agregarRefBotones = (item) => {
+    if (item && !refBotones.current.includes(item)) {
+      refBotones.current.push(item);
+      //console.log(refBotones.current);
+    }
   };
 
   const handleSeleccionarBtn=(i)=> {
