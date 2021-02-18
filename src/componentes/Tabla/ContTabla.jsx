@@ -2,7 +2,7 @@ import Tabla from "./Tabla";
 import array from "./ej_tabla.json";
 
 
-const conf = {
+const confTabla = {
   alterna: false,
   oscura: true,
   indice: false,
@@ -11,20 +11,20 @@ const conf = {
   
 };
 
-const getItem = (item) => {  
+const obtenerItemTabla = (item) => {  
   console.log("Item:", item);
 };
 
-const getIdTitem = (id) => { 
+const obtenerIdItemTabla = (id) => { 
   console.log("ID de Item a eliminar:", id);
 };
 
 export default function ContTabla() {
   return (
     <Tabla
-      getItem={getItem}
-      getIdTitem={getIdTitem}
-      conf={conf}      
+      obtenerId={obtenerIdItemTabla}
+      obtenerItem={obtenerItemTabla}
+      conf={confTabla}      
       array={array}
     />
   );

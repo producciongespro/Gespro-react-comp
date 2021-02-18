@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Login from './Login';
-import Portada from './Portada';
-const URL_API = "http://localhost/rpGespro/webservices/login/login.php";
+import Main from './Main';
+const URL_API_LOGIN = "http://localhost/webservices/login/login.php";
 
 export default function ContLogin() {
   const [conectado, setConectado] = useState(false);
@@ -11,5 +11,5 @@ export default function ContLogin() {
     setConectado(valor);
   };
 
-  return conectado ? <Portada /> : <Login urlApi={URL_API} desbloquear={desbloquear} />;
+  return conectado ? <Main /> : <Login urlApi={URL_API_LOGIN} desbloquear={desbloquear} />;
 }

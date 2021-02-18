@@ -33,7 +33,7 @@ export default function Tarjetas(props) {
 
 
   const handleGetItem=(i)=> {
-    props.getItem( props.array[i]);
+    props.obtenerItem( props.array[i]);
   }
 
   return (

@@ -19,10 +19,10 @@ export default function Login( props ) {
             "usuario" : refCorreo.current.value,
             "clave": refClave.current.value
         }
-        console.log("datos a enviar", data);      
+        //console.log("datos a enviar", data);      
 
         const resp = await sendData (props.urlApi, data);
-        console.log("respuesta del servidor:" , resp);        
+        //console.log("respuesta del servidor:" , resp);        
         setIsWait(false);
         resp.conectado && props.desbloquear(resp.conectado);                
         resp.error && setError(resp.error);
@@ -46,10 +46,9 @@ export default function Login( props ) {
                   </span>
                 </div>
                 <input
-                  type="email"
-                  defaultValue="jime@correo.de"
+                  type="email"                  
                   className="form-control"
-                  placeholder="correo"
+                  placeholder="Digite su correo"
                   aria-label="email"
                   ref={refCorreo}
                   aria-describedby="spnCorreo"
@@ -63,10 +62,9 @@ export default function Login( props ) {
                   </span>
                 </div>
                 <input
-                  type="password"
-                  defaultValue="123"
+                  type="password"                  
                   className="form-control"
-                  placeholder="clave"
+                  placeholder="Digite su contraseña"
                   aria-label="password"
                   ref={refClave}
                   aria-describedby="spnClave"                  

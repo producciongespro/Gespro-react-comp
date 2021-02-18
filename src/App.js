@@ -3,6 +3,7 @@ import ContTarjetas from './componentes/Tarjetas/ContTarjetas';
 import ContBotones from "./componentes/Botones/ContBotones";
 import ContTabla from './componentes/Tabla/ContTabla';
 import ContBuscador from './componentes/Buscador/ContBuscador';
+import ContCalendario from './componentes/Calendario/ContCalendario';
 
 
 
@@ -17,7 +18,7 @@ function App() {
           Funciones JS y componentes React JS
         </p>
       </div>      
-        <ContTabla />            
+        <ContCalendario />                    
     </div>
   );
 }

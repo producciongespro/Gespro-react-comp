@@ -3,12 +3,12 @@ import array from "./ej_botones.json";
 
   // estilos: twitter, round, grass
   // orienta: linea, bloque
-  const conf = {
+  const confBotones = {
     orienta: "linea",
-    estilo: "round",
+    estilo: "twitter",
   };
 
-  const getBtn = ( item ) => {
+  const obtenerBtn = ( item ) => {
     //Obtiene el botón seleccionado:        
     console.log( "Item:", item);
   };
@@ -20,9 +20,9 @@ export default function ContBotones() {
 
   return (
     <Botones      
-      conf={conf}
+      conf={confBotones}
       array={array}
-      getBtn={getBtn}
+      obtenerBtn={obtenerBtn}
     />
   );
 }

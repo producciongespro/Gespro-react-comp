@@ -7,11 +7,11 @@ export default function Tabla(props) {
   //console.log(claseBoostrap);
 
   const handleVerDetalles = (i) => {
-    props.getItem(props.array[i]);
+    props.obtenerItem(props.array[i]);
   };
 
   const handleObtenerId = (e) => {
-    props.getIdTitem(e.target.id);
+    props.obtenerId(e.target.id);
   };
 
   return (

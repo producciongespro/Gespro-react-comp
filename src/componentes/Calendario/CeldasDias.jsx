@@ -1,12 +1,12 @@
 import dias from "./dias.json";
 import meses from "./meses.json";
-import { filtrarId } from 'gespro-utils/filtrar_array';
+import { filtrarId } from "gespro-utils/filtrar_array";
 import "./celda_dias.css";
 
 export default function CeldasDias(props) {
   let mesMontado = filtrarId(meses, props.idMes);
   var consecutivo = [];
-  const claseTamano= "cal-" + props.conf.t;
+  const claseTamano = "cal-" + props.conf.t;
 
   const handlerSelectDia = (e) => {
     let id = e.target.id;
@@ -49,8 +49,6 @@ export default function CeldasDias(props) {
         role="button"
         ref={props.agregarRefs}
       >
-        {props.hoy.dia === item &&
-          props.hoy.mes === parseInt(mesMontado.id) && <span className="emoji-s" >🙂</span>}
         {item}
       </div>
     );
@@ -66,8 +64,6 @@ export default function CeldasDias(props) {
         role="button"
         ref={props.agregarRefs}
       >
-          {props.hoy.dia === item &&
-          props.hoy.mes === parseInt(mesMontado.id) && <span className="emoji-s" >🙂</span>}
         {item}
       </div>
     );
@@ -77,24 +73,24 @@ export default function CeldasDias(props) {
 
   crearGrilla();
 
-  return (  
-      <div className="contenedor fondo-calendario">
-        <div className="row">
-          {dias.map((item) => (
-            <div key={"dia" + item.id} className={"fila-dias " + claseTamano}>              
-              {item.nombre}
-            </div>
-          ))}
-        </div>
-        <div className="row">
-          {consecutivo.map((item, i) =>
-            item > 0 ? (
-              jsxCelda(item, i)
-            ) : (
-              <div key={"grid" + i} className="celda-des"></div>
-            )
-          )}
-        </div>
-      </div>    
+  return (
+    <div className="contenedor fondo-calendario">
+      <div className="row">
+        {dias.map((item) => (
+          <div key={"dia" + item.id} className={"fila-dias " + claseTamano}>
+            {item.nombre}
+          </div>
+        ))}
+      </div>
+      <div className="row">
+        {consecutivo.map((item, i) =>
+          item > 0 ? (
+            jsxCelda(item, i)
+          ) : (
+            <div key={"grid" + i} className="celda-des"></div>
+          )
+        )}
+      </div>
+    </div>
   );
 }

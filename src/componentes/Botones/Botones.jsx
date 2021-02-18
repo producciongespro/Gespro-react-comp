@@ -34,7 +34,7 @@ export default function Botones(props) {
     const btn= refBotones.current[i];
     //console.log(btn);
     btn.classList.add("btn-seleccionado");
-    props.getBtn(props.array[i] );
+    props.obtenerBtn(props.array[i] );
   }
 
 
