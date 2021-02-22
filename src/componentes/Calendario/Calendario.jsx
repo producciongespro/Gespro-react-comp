@@ -20,18 +20,18 @@ export default function Calendario(props) {
   const [idMes, setIdMes]= useState(hoy.mes);
 
   useEffect(()=>{
-    console.log("idMes", idMes);
+    props.obtenerIdMes(idMes);
   });
 
   const obtenerMes=(id, mesActual )=> {
     setIdMes(id);
-    console.log("mes actual desde calendario", mesActual);
+    //console.log(mesActual);    
   }
 
   return (
     <>
       <EncabezadoCal obtenerMes={obtenerMes} hoy={hoy} />
-      <CeldaDias conf={props.conf} hoy={hoy} idMes={idMes} />
+      <CeldaDias obtenerFecha={props.obtenerFecha} conf={props.conf} hoy={hoy} idMes={idMes} />
     </>
   );
 }

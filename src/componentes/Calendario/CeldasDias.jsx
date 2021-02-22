@@ -8,9 +8,9 @@ export default function CeldasDias(props) {
   var consecutivo = [];
   const claseTamano = "cal-" + props.conf.t;
 
-  const handlerSelectDia = (e) => {
+  const handleSelecFecha = (e) => {
     let id = e.target.id;
-    console.log("id", id);
+    props.obtenerFecha(id);
   };
 
   const crearGrilla = () => {
@@ -43,8 +43,8 @@ export default function CeldasDias(props) {
         key={"grid" + i}
         tabIndex="2"
         id={mesMontado.renderMes + item}
-        onClick={handlerSelectDia}
-        onKeyPress={handlerSelectDia}
+        onClick={handleSelecFecha}
+        onKeyPress={handleSelecFecha}
         className={claseCelda + " " + claseTamano}
         role="button"
         ref={props.agregarRefs}
@@ -58,8 +58,8 @@ export default function CeldasDias(props) {
         key={"grid" + i}
         tabIndex="2"
         id={mesMontado.renderMes + "0" + item}
-        onClick={handlerSelectDia}
-        onKeyPress={handlerSelectDia}
+        onClick={handleSelecFecha}  
+        onKeyPress={handleSelecFecha}      
         className={claseCelda + " " + claseTamano}
         role="button"
         ref={props.agregarRefs}
