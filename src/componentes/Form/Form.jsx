@@ -5,7 +5,7 @@ const Form = (props) => {
   const inputs = props.inputs;
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = data => {
-      console.log("Datos a enviar", data);
+      props.getDataForm(data)
   }
   console.log(errors);
 
@@ -13,7 +13,7 @@ const Form = (props) => {
     <form onSubmit={handleSubmit(onSubmit)}>
       {inputs.map((item, i) => (
         <div className="form-group" key={"input"+i}>
-          <label htmlFor={ item.id } > {item.label} </label>
+          <label className="item-negrilla" htmlFor={ item.id } > {item.label} </label>
           <span className="item-error" >{errors[item.id] && " Campo requerido"}</span>
           <input
             type={item.type}

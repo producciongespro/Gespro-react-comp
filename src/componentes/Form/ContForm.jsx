@@ -29,13 +29,25 @@ const inputs =[
         maxLength: 20,
         disabled: false,
         required: true
+    },
+    {
+        id: "url",
+        type: "url",
+        label: "url",
+        placeholder: "",
+        maxLength: 256,
+        disabled: false,
+        required: true
     }
   
 ]
 
+const getDataForm=(data)=> {
+    console.log("Dataos a enviar al servidor", data);
+}
 
 const ContForm = () => {
-  return <Form  inputs={inputs} />;
+  return <Form  getDataForm={getDataForm} inputs={inputs} />;
 };
 
 export default ContForm;
