@@ -2,52 +2,89 @@ import Form from "./Form";
 
 // types: date, number, email, text, range, url
 
-const inputs =[
-    {
-        id: "nombre",
-        type: "text",
-        label: "Nombre",
-        placeholder: "Escriba su nombre",
-        maxLength: 64,
-        disabled: false,
-        required: true
-    },
-    {
-        id: "correo",
-        type: "email",
-        label: "Correo",
-        placeholder: "Debe ser correo mep",
-        maxLength: 20,
-        disabled: false,
-        required: true
-    },
-    {
-        id: "fecha",
-        type: "date",
-        label: "Fecha nacimiento",
-        placeholder: "",
-        maxLength: 20,
-        disabled: false,
-        required: true
-    },
-    {
-        id: "url",
-        type: "url",
-        label: "url",
-        placeholder: "",
-        maxLength: 256,
-        disabled: false,
-        required: true
-    }
-  
-]
+const inputs = [
+  {
+    id: "nombre",
+    type: "text",
+    label: "Nombre",
+    placeholder: "Escriba su nombre",
+    maxLength: 64,
+    readOnly: true,
+    defaultValue: "Pepito",
+    required: true,
+  },
+  {
+    id: "correo",
+    type: "email",
+    label: "Correo",
+    placeholder: "Debe ser correo mep",
+    maxLength: 20,
+    required: true,
+  },
+  {
+    id: "fecha",
+    type: "date",
+    label: "Fecha nacimiento",
+    placeholder: "",
+    maxLength: 20,
+    required: true,
+  },
+  {
+    id: "url",
+    type: "url",
+    label: "url",
+    placeholder: "",
+    maxLength: 256,
+    required: true,
+  },
+];
 
-const getDataForm=(data)=> {
-    console.log("Dataos a enviar al servidor", data);
-}
+const txtAreas = [
+  {
+    label: "Observaciones",
+    id: "observaciones",
+    rows: "8",
+    required: true,
+  },
+  {
+    label: "Notas importantes",
+    id: "notas",
+    rows: "4",
+    disabled: true,
+    defaultValue:
+      "Corporis nemo odit assumenda quas cumque optio, commodi cum.",
+  },
+  {
+    label: "Solo lectura",
+    id: "lectura",
+    rows: "4",
+    readOnly: true,
+    defaultValue:
+      "Test 123",
+  }
+];
+
+const selects = [
+  {
+    id: "frutas",
+    label:"Frutas",
+    required: true,
+    opts: [{text:"Mango", value: 1 }, {text:"Sandía", value: 2 }, {text:"Piña", value: 3 }     ]
+  },
+  {
+    id: "autos",
+    label:"Autos",
+    required: true,
+    opts: [{text:"Toyota", value: 1 }, {text:"Mitsubishi", value: 2 }, {text:"Hyundai", value: 3 }, {text:"Nissan", value: 4 }     ]
+  }
+];
+
+const getDataForm = (data) => {
+  console.log("Dataos a enviar al servidor", data);
+};
 
 const ContForm = () => {
-  return <Form  getDataForm={getDataForm} inputs={inputs} />;
+  return <Form getDataForm={getDataForm} inputs={inputs} selects={selects} txtAreas={txtAreas} />;
 };
 
 export default ContForm;
