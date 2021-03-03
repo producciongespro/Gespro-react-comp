@@ -6,6 +6,8 @@ const confTabla = {
   alterna: false,
   oscura: true,
   indice: false,
+  ver: false,
+  eliminar: false,
   encabezado: ["Nivel", "Nombre", "Responsable"], //Títulos de tabla (Primera fila encabezado)
   campos: [ "nivel", "nombre", "responsable" ]  // Nombre de los cmapos del json
   
