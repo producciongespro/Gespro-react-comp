@@ -5,7 +5,7 @@ import ContTabla from './componentes/Tabla/ContTabla';
 import ContBuscador from './componentes/Buscador/ContBuscador';
 import ContCalendario from './componentes/Calendario/ContCalendario';
 import ContForm from './componentes/Form/ContForm';
-
+import ContGModal from './componentes/Modal/ContGModal';
 
 
 
@@ -19,7 +19,7 @@ function App() {
           Funciones JS y componentes React JS
         </p>
       </div>      
-        <ContForm />                    
+        <ContGModal />                    
     </div>
   );
 }
