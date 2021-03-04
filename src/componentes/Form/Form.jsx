@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import "./form.css";
 import "./pretty-checkbox.min.css";
@@ -12,7 +13,7 @@ const handleGetCheck = (e) => {
   console.log(item.name);
   */
   const tmpObj = {
-    campo: item.name,
+    nombre: item.name,
     llave: item.id,
     valor: item.checked,
   };
@@ -20,15 +21,25 @@ const handleGetCheck = (e) => {
   //console.log(valoresCheck);
 };
 
+
+
 const Form = (props) => {
+  const [valInput, setValInput]= useState(null);
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     if (valoresCheck) {
-      data.valoresCheck=valoresCheck;
+      data.valoresCheck = valoresCheck;
     }
     props.getDataForm(data);
   };
   console.log(errors);
+
+
+  const handleGetValue=(e)=> {
+    const val= e.target.value;
+    console.log(val);
+    setValInput(val);
+  }
 
   const JsxInput = (item, key) => {
     return (
@@ -39,8 +50,12 @@ const Form = (props) => {
         >
           {item.required && <span className="item-required">*</span>}
           {item.label}
+          {
+            item.type === "range" && <span> {valInput} </span>
+          }
         </label>
         <input
+          onInput={handleGetValue}
           type={item.type}
           className="form-control"
           id={item.id}
@@ -49,6 +64,8 @@ const Form = (props) => {
           maxLength={item.maxLength}
           disabled={item.disabled}
           readOnly={item.readOnly}
+          min={item.min}
+          max={item.max}          
           defaultValue={item.defaultValue && item.defaultValue}
           ref={register({ required: item.required })}
         />
