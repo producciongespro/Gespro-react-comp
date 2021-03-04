@@ -110,6 +110,12 @@ const arrayControls = [
     required: true
   },
   {
+    control: "textArea",
+    label: "Notas",
+    id: "notas",
+    rows: "2"    
+  },
+  {
     control: "select",
     id: "frutas",
     label:"Frutas",
