@@ -103,9 +103,11 @@ const arrayControls = [
     
   },
   {
-    control: "chekbox",
-    title: "Dispositivos",
-    labels: ["Laptops", "Tablets"]
+    control: "chekbox",    
+    title: "Postres",
+    name: "postres",
+    labels: ["Arroz con leche", "Tees leches", "Flan", "Tiramisú", "Gelatina", "Pae Limón"  ],
+    required: true
   },
   {
     control: "textarea",

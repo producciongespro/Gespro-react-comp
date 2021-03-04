@@ -98,29 +98,29 @@ const Form = (props) => {
 
   const JsxCheckBox = (item, key) => {
     return (
-      <div className="input-group mb-4 " key={key}>        
-          <span
-            className={`item-titulo ${
-              errors[item.id] && "item-error"
-            }`}
-          >
+      <div className="row" key={key}>
+        <div className="col-sm-12 mb-2">
+          <span className={`item-titulo ${errors[item.id] && "item-error"}`}>
+          {item.required && <span className="item-required">*</span>}
             {item.title}
           </span>
-        
+        </div>
 
         <br />
-        <div className="pretty p-switch p-fill">
-          <input type="checkbox" />
-          <div className="state">
-            <label> uno </label>
+
+      {
+        item.labels.map ((label, i)=>(
+          <div className="form-group form-check" key={"chk"+i}>
+          <div className="pretty p-switch p-fill">
+            <input type="checkbox" />
+            <div className="state">
+              <label> {label} </label>
+            </div>
           </div>
         </div>
-        <div className="pretty p-switch p-fill">
-          <input type="checkbox" />
-          <div className="state">
-            <label> dos </label>
-          </div>
-        </div>
+        ) )
+      }
+
       </div>
     );
   };
