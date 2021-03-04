@@ -2,9 +2,30 @@ import { useForm } from "react-hook-form";
 import "./form.css";
 import "./pretty-checkbox.min.css";
 
+let valoresCheck = [];
+
+const handleGetCheck = (e) => {
+  const item = e.target;
+  /*
+  console.log(item.id);
+  console.log(item.checked);
+  console.log(item.name);
+  */
+  const tmpObj = {
+    campo: item.name,
+    llave: item.id,
+    valor: item.checked,
+  };
+  valoresCheck.push(tmpObj);
+  //console.log(valoresCheck);
+};
+
 const Form = (props) => {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
+    if (valoresCheck) {
+      data.valoresCheck=valoresCheck;
+    }
     props.getDataForm(data);
   };
   console.log(errors);
@@ -101,26 +122,28 @@ const Form = (props) => {
       <div className="row" key={key}>
         <div className="col-sm-12 mb-2">
           <span className={`item-titulo ${errors[item.id] && "item-error"}`}>
-          {item.required && <span className="item-required">*</span>}
+            {item.required && <span className="item-required">*</span>}
             {item.title}
           </span>
         </div>
 
         <br />
 
-      {
-        item.labels.map ((label, i)=>(
-          <div className="form-group form-check" key={"chk"+i}>
-          <div className="pretty p-switch p-fill">
-            <input type="checkbox" />
-            <div className="state">
-              <label> {label} </label>
+        {item.labels.map((label, i) => (
+          <div className="form-group form-check" key={item.name + i}>
+            <div className="pretty p-switch p-fill">
+              <input
+                type="checkbox"
+                id={label}
+                name={item.name}
+                onClick={handleGetCheck}
+              />
+              <div className="state">
+                <label> {label} </label>
+              </div>
             </div>
           </div>
-        </div>
-        ) )
-      }
-
+        ))}
       </div>
     );
   };

@@ -108,7 +108,7 @@ const arrayControls = [
     name: "postres",
     labels: ["Arroz con leche", "Tees leches", "Flan", "Tiramisú", "Gelatina", "Pae Limón"  ],
     required: true
-  },
+  },  
   {
     control: "textarea",
     label: "Observaciones",
