@@ -7,3 +7,8 @@
 .item-negrilla {
     font-weight: bold;
 }
+
+.item-required {
+    color: crimson;
+    font-weight: bold;
+}
