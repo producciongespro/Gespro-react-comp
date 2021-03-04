@@ -11,30 +11,16 @@ const arrayControls = [
     type: "text",
     label: "Nombre",
     placeholder: "Escriba su nombre",
-    maxLength: 64,
-    //readOnly: true,
-    //defaultValue: "Pepito",
+    maxLength: 64,    
     required: true
   },
-
-  {
-    control: "input",
-    id: "frecuencia",
-    type: "range",
-    label: "frecuencia",      
-    min:"25",
-    max:"50",
-    defaultValue:"30"
-  },
-
   {
     control: "input",
     id: "correo",
     type: "email",
     label: "Correo",
     placeholder: "Debe ser correo mep",
-    maxLength: 20
-    
+    maxLength: 20    
   },
   {
     control: "chekbox",    
@@ -55,6 +41,15 @@ const arrayControls = [
     label: "Notas",
     id: "notas",
     rows: "2"    
+  },
+  {
+    control: "input",
+    id: "frecuencia",
+    type: "range",
+    label: "frecuencia",      
+    min:"25",
+    max:"50",
+    defaultValue:"30"
   },
   {
     control: "select",
