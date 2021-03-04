@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import "./form.css";
+import "./pretty-checkbox.min.css";
 
 const Form = (props) => {
   const { register, handleSubmit, errors } = useForm();
@@ -95,6 +96,35 @@ const Form = (props) => {
     );
   };
 
+  const JsxCheckBox = (item, key) => {
+    return (
+      <div className="input-group mb-4 " key={key}>        
+          <span
+            className={`item-titulo ${
+              errors[item.id] && "item-error"
+            }`}
+          >
+            {item.title}
+          </span>
+        
+
+        <br />
+        <div className="pretty p-switch p-fill">
+          <input type="checkbox" />
+          <div className="state">
+            <label> uno </label>
+          </div>
+        </div>
+        <div className="pretty p-switch p-fill">
+          <input type="checkbox" />
+          <div className="state">
+            <label> dos </label>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       {props.array.map((item, i) => {
@@ -104,8 +134,11 @@ const Form = (props) => {
         if (item.control === "select") {
           return JsxSelect(item, i);
         }
-        if (item.control === "textArea") {
+        if (item.control === "textarea") {
           return JsxTxtArea(item, i);
+        }
+        if (item.control === "chekbox") {
+          return JsxCheckBox(item, i);
         }
       })}
 

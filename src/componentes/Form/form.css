@@ -12,3 +12,8 @@
     color: crimson;
     font-weight: bold;
 }
+
+.item-titulo {
+    font-weight: bold;
+    display: block;
+}

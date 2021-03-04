@@ -103,14 +103,19 @@ const arrayControls = [
     
   },
   {
-    control: "textArea",
+    control: "chekbox",
+    title: "Dispositivos",
+    labels: ["Laptops", "Tablets"]
+  },
+  {
+    control: "textarea",
     label: "Observaciones",
     id: "observaciones",
     rows: "8",
     required: true
   },
   {
-    control: "textArea",
+    control: "texarea",
     label: "Notas",
     id: "notas",
     rows: "2"    
