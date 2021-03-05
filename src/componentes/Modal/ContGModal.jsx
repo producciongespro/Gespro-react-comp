@@ -17,15 +17,16 @@ const ContGModal = () => {
           />
         </div>
       </div>
-      
-      <GModal
-        show={show}
+
+          <GModal  
+          show={show}
         handleClose={handleClose}
-        title="Título Modal"
-        footer="Pie del modal"
-      >
-       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus temporibus, enim iure nostrum quasi atque. Minima asperiores, impedit explicabo repellendus suscipit excepturi cumque unde iure accusamus pariatur dolore officia neque.
-      </GModal>
+        title="Ayuda del recurso"
+        footer="pie de página" >
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quis rem est suscipit pariatur, obcaecati debitis eligendi voluptatibus corrupti expedita in culpa nihil sapiente excepturi. Commodi aliquam unde adipisci quae?</p>
+            <p>Tempora, quia sed voluptas debitis eos dolorem velit distinctio ducimus aliquid assumenda ea culpa error eligendi nisi optio tenetur consequuntur qui! Pariatur maxime repellat ut accusantium veniam distinctio consequuntur labore.</p>
+        </GModal>
+     
     </>
   );
 };
