@@ -1,6 +1,6 @@
 import Form from "./Form";
 
-// input types: date, number, email, text, range, url
+// input types: date, number, email, text, range, url, password
 // control: "input", textarea, select, chekbox
 
 
