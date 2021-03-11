@@ -1,0 +1,16 @@
+[
+    {
+        "control": "select",
+        "id": "frutas",
+        "label":"Frutas",
+        "required": true,
+        "opts": [{"text":"Mango", "value": 1 }, {"text":"Sandía", "value": 2 }, {"text":"Piña", "value": 3 }]
+      },
+      {
+        "control": "select",
+        "id": "autos",
+        "label":"Autos",
+        "required": true,
+        "opts": [{"text":"Toyota", "value": 1 }, {"text":"Mitsubishi", "value": 2 }, {"text":"Hyundai", "value": 3 }, {"text":"Nissan", "value": 4 }     ]
+      }
+]

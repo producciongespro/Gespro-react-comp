@@ -1,0 +1,65 @@
+[
+  {
+    "control": "input",
+    "id": "nombre",
+    "type": "text",
+    "label": "Nombre",
+    "placeholder": "Escriba su nombre",
+    "maxLength": 64,
+    "required": true
+  },
+  {
+    "control": "input",
+    "id": "clave",
+    "type": "password",
+    "label": "Contraseña",
+    "placeholder": "Escriba su contraseña",
+    "maxLength": 5,
+    "required": true
+  },
+  {
+    "control": "input",
+    "id": "fecha",
+    "type": "date",
+    "label": "Fecha de nacimiento",
+    "placeholder": "Escriba su fecha de nacimiento",    
+    "required": true
+  },
+  {
+    "control": "input",
+    "id": "dispositivos",
+    "type": "number",
+    "label": "Cantidad de dispositivos",    
+    "min" : 10,
+    "max": 50,
+    "step": 5
+    
+  },
+  {
+    "control": "input",
+    "id": "Correo",
+    "type": "email",
+    "label": "Correo",    
+    "placeholder": "Escriba su correo",
+    "maxLength": 64,
+    "required": true
+  },
+  {
+    "control": "input",
+    "id": "frecuencia",
+    "type": "range",
+    "label": "Frecuencia de uso",        
+    "min" : 0,
+    "max": 200,
+    "step": 5,
+    "defaultValue": 50    
+  },
+  {
+    "control": "input",
+    "id": "web",
+    "type": "url",
+    "label": "Sitio Web",    
+    "placeholder": "Escriba su sitio web",
+    "maxLength": 64    
+  }
+]

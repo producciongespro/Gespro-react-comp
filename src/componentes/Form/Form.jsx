@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import "./form.css";
-import "./pretty-checkbox.min.css";
+import { eliminar } from "gespro-utils/crud_array";
+import "./css/form.css";
+import "./css/pretty-checkbox.min.css";
 
 let valoresCheck = [];
 
@@ -12,34 +13,43 @@ const handleGetCheck = (e) => {
   console.log(item.checked);
   console.log(item.name);
   */
-  const tmpObj = {
-    nombre: item.name,
-    llave: item.id,
-    valor: item.checked,
-  };
-  valoresCheck.push(tmpObj);
+
+  if (item.checked) {
+    //si es vardadero simplemente lo agrega en el array:
+    const tmpObj = {
+      nombre: item.name,
+      id: item.id,
+      valor: item.checked,
+    };
+    valoresCheck.push(tmpObj);
+    //console.log(valoresCheck);
+  } else {
+    //Si es falso lo busca del array para eliminarlo
+    const itemEliminado = eliminar(item.id, valoresCheck);
+    //console.log("Objeto eliminado", itemEliminado);
+  }
+
   //console.log(valoresCheck);
 };
 
-
-
 const Form = (props) => {
-  const [valInput, setValInput]= useState(null);
+  const [valInput, setValInput] = useState(null);
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     if (valoresCheck) {
-      data.valoresCheck = valoresCheck;
+      if (valoresCheck.length > 0) {
+        data.valoresCheck = valoresCheck;
+      }
     }
     props.getDataForm(data);
   };
-  console.log(errors);
+  //console.log(errors);
 
-
-  const handleGetValue=(e)=> {
-    const val= e.target.value;
-    console.log(val);
+  const handleGetValue = (e) => {
+    const val = e.target.value;
+    //console.log(val);
     setValInput(val);
-  }
+  };
 
   const JsxInput = (item, key) => {
     return (
@@ -50,9 +60,7 @@ const Form = (props) => {
         >
           {item.required && <span className="item-required">*</span>}
           {item.label}
-          {
-            item.type === "range" && <span> {valInput} </span>
-          }
+          {item.type === "range" && <span> {valInput} </span>}
         </label>
         <input
           onInput={handleGetValue}
@@ -65,7 +73,8 @@ const Form = (props) => {
           disabled={item.disabled}
           readOnly={item.readOnly}
           min={item.min}
-          max={item.max}          
+          max={item.max}
+          step={item.step}
           defaultValue={item.defaultValue && item.defaultValue}
           ref={register({ required: item.required })}
         />
@@ -135,6 +144,22 @@ const Form = (props) => {
   };
 
   const JsxCheckBox = (item, key) => {
+    //VAlidación clase color bostrap:
+    let colorClass = "state";
+    if (item.colorClass) {
+      colorClass = colorClass + " " + item.colorClass;
+    }
+    // Validación para tipo de clase prety
+    let classPretty = "pretty";
+    if (item.style) {
+      classPretty = classPretty + " " + item.style;
+    }
+
+    //Validacion de clase animacion
+    if (item.animation) {
+      classPretty = classPretty + " " + item.animation;
+    }
+
     return (
       <div className="row" key={key}>
         <div className="col-sm-12 mb-2">
@@ -147,15 +172,15 @@ const Form = (props) => {
         <br />
 
         {item.labels.map((label, i) => (
-          <div className="form-group form-check" key={item.name + i}>
-            <div className="pretty p-switch p-fill">
+          <div className="form-group form-check" key={item.name + i}>            
+            <div className={classPretty}>
               <input
                 type="checkbox"
                 id={label}
                 name={item.name}
                 onClick={handleGetCheck}
-              />
-              <div className="state">
+              />              
+              <div className={colorClass}>              
                 <label> {label} </label>
               </div>
             </div>
