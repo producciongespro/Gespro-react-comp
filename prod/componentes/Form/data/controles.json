@@ -17,12 +17,21 @@
         "maxLength": 20    
       },
       {
-        "control": "chekbox",    
+        "control": "chekbox",
         "title": "Postres",
         "name": "postres",
-        "labels": ["Arroz con leche", "Tees leches", "Flan", "Tiramisú", "Gelatina", "Pae Limón"  ],
-        "required": true
-      },  
+        "labels": [
+          "Arroz con leche",
+          "Tees leches",
+          "Flan",
+          "Tiramisú",
+          "Gelatina",
+          "Pae Limón"
+        ],
+        "colorClass": "p-success",
+        "style": "p-switch p-fill",
+        "animation": "p-smooth"
+      },
       {
         "control": "textarea",
         "label": "Observaciones",
