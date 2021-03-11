@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "titulo": "Deliciosa ensalada de frutas",
+        "urlImg": "./png/food1.png",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar."        
+    },
+    {
+        "id": "2",
+        "titulo": "Canasta de frutas y legumbres",
+        "urlImg": "./png/food2.png",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar."        
+    },
+    {
+        "id": "3",
+        "titulo": "Alimentos saludables",
+        "urlImg": "./png/food3.png",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar."        
+    },
+    {
+        "id": "4",
+        "titulo": "Alumnerzo 1",
+        "urlImg": "./png/lunch1.png",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar."        
+    },
+    {
+        "id": "5",
+        "titulo": "Alumnerzo 2",
+        "urlImg": "./png/lunch2.png",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar."        
+    },
+    {
+        "id": "6",
+        "titulo": "Alumnerzo 3",
+        "urlImg": "./png/lunch3.png",
+        "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar."        
+    }
+]

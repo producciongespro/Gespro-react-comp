@@ -1,0 +1,19 @@
+.item-error {
+    color: red;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.item-negrilla {
+    font-weight: bold;
+}
+
+.item-required {
+    color: crimson;
+    font-weight: bold;
+}
+
+.item-titulo {
+    font-weight: bold;
+    display: block;
+}

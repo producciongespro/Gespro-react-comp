@@ -1,0 +1,54 @@
+[
+    {
+        "control": "chekbox",
+        "title": "Lenguajes",
+        "name": "lenguajes",
+        "labels": ["JavaScript", "PHP", "Phyton", "C#", "Java" ],    
+        "colorClass": "default",
+        "style": "p-default"
+      },
+  {
+    "control": "chekbox",
+    "title": "Postres",
+    "name": "postres",
+    "labels": [
+      "Arroz con leche",
+      "Tees leches",
+      "Flan",
+      "Tiramisú",
+      "Gelatina",
+      "Pae Limón"
+    ],
+    "colorClass": "p-success",
+    "style": "p-switch p-fill",
+    "animation": "p-smooth"
+  },
+  {
+    "control": "chekbox",
+    "title": "Programas de tv",
+    "name": "programas",
+    "labels": [
+      "Bety la fea",
+      "El chavo del 8",
+      "Magníficos",
+      "Misión vietnam",
+      "Heores de Hogan",
+      "Los tres chiflados",
+      "El auto fantástico"
+    ],
+    "required": true,
+    "colorClass": "p-info",
+    "style": "p-switch p-slim",
+    "animation": "p-jelly"
+  },
+  {
+    "control": "chekbox",
+    "title": "Autos",
+    "name": "autos",
+    "labels": ["Toyota", "Nissan", "Hyndai", "Mitsubishi", "Honda" ],    
+    "colorClass": "p-danger",
+    "style": "p-round",
+    "animation": "p-tada"
+  }
+
+]

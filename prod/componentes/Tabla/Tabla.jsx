@@ -24,8 +24,8 @@ export default function Tabla(props) {
               {item}
             </th>
           ))}
-          <th className="text-center">Ver</th>
-          <th className="text-center">Eliminar</th>
+          {conf.ver && <th className="text-center">Ver</th>}
+          {conf.eliminar && <th className="text-center">Eliminar</th>}
         </tr>
       </thead>
       <tbody>
@@ -36,23 +36,34 @@ export default function Tabla(props) {
               <td key={"campo" + indice}> {item[campo]} </td>
             ))}
 
-            <td className="text-center">
-              <button
-                onClick={() => handleVerDetalles(i)}
-                className="btn btn-success btn-sm px-3"
-              >
-                👁️
-              </button>
-            </td>
-            <td className="text-center">
-              <button
-                id={item.id}
-                onClick={handleObtenerId}
-                className="btn btn-info btn-sm px-3"
-              >
-                🗑️
-              </button>
-            </td>
+            {
+              //Columna ver
+              conf.ver && (
+                <td className="text-center">
+                  <button
+                    onClick={() => handleVerDetalles(i)}
+                    className="btn btn-success btn-sm px-3"
+                  >
+                    👁️
+                  </button>
+                </td>
+              )
+            }
+
+            {
+              //Columna eliminar (obtener el id)
+              conf.eliminar && (
+                <td className="text-center">
+                  <button
+                    id={item.id}
+                    onClick={handleObtenerId}
+                    className="btn btn-info btn-sm px-3"
+                  >
+                    🗑️
+                  </button>
+                </td>
+              )
+            }
           </tr>
         ))}
       </tbody>

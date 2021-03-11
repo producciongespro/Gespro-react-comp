@@ -1,0 +1,31 @@
+[
+    {
+        "id": "1",
+        "nombre": "Patos Estdiosos",
+        "nivel": "primero",
+        "responsable": "Jose Mora",
+        "tags": ["patos", "español", "naturaleza", "estudio", "primero", "jose" ]
+    },
+    {
+        "id": "2",
+        "nombre": "Nubes saltarinas",
+        "nivel": "segundo",
+        "responsable": "Pepito Campos",
+        "tags": ["nubes", "matematica", "cielo", "estudio", "segundo", "pepito" ]
+
+    },
+    {
+        "id": "3",
+        "nombre": "Cuadros de colores",
+        "nivel": "segundo",
+        "responsable": "Pepito Campos",
+        "tags": ["cuadros", "matematica", "colores", "estudio", "segundo", "pepito" ]
+    },
+    {
+        "id": "4",
+        "nombre": "Ratones traviesos",
+        "nivel": "segundo",
+        "responsable": "Juanita Campos",
+        "tags": "ratones, traviesos, matematica, estudio, segundo, juanita"
+    }
+]
