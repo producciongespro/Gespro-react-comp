@@ -9,8 +9,15 @@ export default function CeldasDias(props) {
   const claseTamano = "cal-" + props.conf.t;
 
   const handleSelecFecha = (e) => {
-    let id = e.target.id;
-    props.obtenerFecha(id);
+    let celda = e.target;
+    const seleccion= {
+      "id": celda.id,
+      "dia": celda.dataset.dia,
+      "mes": celda.dataset.mes.split("-")[1],
+      "anno": celda.dataset.mes.split("-")[0]
+    }
+
+    props.obtenerFecha(seleccion);
   };
 
   const crearGrilla = () => {
@@ -42,6 +49,8 @@ export default function CeldasDias(props) {
       <div
         key={"grid" + i}
         tabIndex="2"
+        data-dia={item}
+        data-mes={mesMontado.renderMes}
         id={mesMontado.renderMes + item}
         onClick={handleSelecFecha}
         onKeyPress={handleSelecFecha}
@@ -57,6 +66,8 @@ export default function CeldasDias(props) {
       <div
         key={"grid" + i}
         tabIndex="2"
+        data-dia={item}
+        data-mes={mesMontado.renderMes}
         id={mesMontado.renderMes + "0" + item}
         onClick={handleSelecFecha}  
         onKeyPress={handleSelecFecha}      
