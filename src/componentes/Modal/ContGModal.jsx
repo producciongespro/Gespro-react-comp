@@ -21,7 +21,7 @@ const ContGModal = () => {
           <GModal  
           show={show}
         handleClose={handleClose}
-        title="Ayuda del recurso"
+        title="Título del modal"
         footer="pie de página" >
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quis rem est suscipit pariatur, obcaecati debitis eligendi voluptatibus corrupti expedita in culpa nihil sapiente excepturi. Commodi aliquam unde adipisci quae?</p>
             <p>Tempora, quia sed voluptas debitis eos dolorem velit distinctio ducimus aliquid assumenda ea culpa error eligendi nisi optio tenetur consequuntur qui! Pariatur maxime repellat ut accusantium veniam distinctio consequuntur labore.</p>
