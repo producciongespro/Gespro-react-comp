@@ -7,7 +7,7 @@ const imagenes = [
     alt: "Alimento 1",
   },
   {
-    urlImg: "./assets/png/food2.png",
+    urlImg: "./assets/png/food246.png",
     alt: "Alimento 2",
   },
   {
