@@ -3,11 +3,11 @@ import array from "./ej_tabla.json";
 
 
 const confTabla = {
-  alterna: true,
+  alterna: false,
   oscura: false,
-  indice: false,
-  ver: true,
-  eliminar: true,
+  indice: true,
+  ver: false,
+  eliminar: false,
   encabezado: ["Nivel", "Nombre", "Responsable"], //Títulos de tabla (Primera fila encabezado)
   campos: [ "nivel", "nombre", "responsable" ]  // Nombre de los cmapos del json
   

@@ -1,12 +1,12 @@
 [
-    {
-        "control": "chekbox",
-        "title": "Lenguajes",
-        "name": "lenguajes",
-        "labels": ["JavaScript", "PHP", "Phyton", "C#", "Java" ],    
-        "colorClass": "default",
-        "style": "p-default"
-      },
+  {
+    "control": "chekbox",
+    "title": "Lenguajes",
+    "name": "lenguajes",
+    "labels": ["JavaScript", "PHP", "Phyton", "C#", "Java"],
+    "colorClass": "default",
+    "style": "p-default"
+  },
   {
     "control": "chekbox",
     "title": "Postres",
@@ -45,10 +45,9 @@
     "control": "chekbox",
     "title": "Autos",
     "name": "autos",
-    "labels": ["Toyota", "Nissan", "Hyndai", "Mitsubishi", "Honda" ],    
+    "labels": ["Toyota", "Nissan", "Hyndai", "Mitsubishi", "Honda"],
     "colorClass": "p-danger",
     "style": "p-round",
     "animation": "p-tada"
   }
-
 ]
