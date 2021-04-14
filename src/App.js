@@ -6,6 +6,7 @@ import ContBuscador from './componentes/Buscador/ContBuscador';
 import ContCalendario from './componentes/Calendario/ContCalendario';
 import ContForm from './componentes/Form/ContForm';
 import ContGModal from './componentes/Modal/ContGModal';
+import ContImagen from "./componentes/Imagen/ContImagen";
 
 
 
@@ -19,7 +20,7 @@ function App() {
           Funciones JS y componentes React JS
         </p>
       </div>      
-        <ContTarjetas />                    
+        <ContImagen />                    
     </div>
   );
 }
