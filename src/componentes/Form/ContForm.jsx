@@ -1,6 +1,7 @@
 import Form from "./Form";
 import controles from "./data/controles.json";
 //import chekboxes from "./data/chekboxes.json";
+import inputs from "./data/inputs.json";
 
 const getDataForm = (data) => {
   console.log("Dataos a enviar al servidor", data);
@@ -15,7 +16,7 @@ const getDataForm = (data) => {
  */
 
 const ContForm = () => {
-  return <Form getDataForm={getDataForm} array={controles} />;
+  return <Form getDataForm={getDataForm} array={inputs} />;
 };
 
 export default ContForm;

@@ -5,6 +5,7 @@ import "./css/form.css";
 import "./css/pretty-checkbox.min.css";
 
 let valoresCheck = [];
+let selectedFile=null;
 
 const handleGetCheck = (e) => {
   const item = e.target;
@@ -40,6 +41,13 @@ const Form = (props) => {
       if (valoresCheck.length > 0) {
         data.valoresCheck = valoresCheck;
       }
+
+      //adjuntar archivo
+  /*
+      if (selectedFile) {
+        data.selectedFile = selectedFile;        
+      }
+      */
     }
     props.getDataForm(data);
   };
@@ -49,6 +57,17 @@ const Form = (props) => {
     const val = e.target.value;
     //console.log(val);
     setValInput(val);
+  };
+
+  const handleFile = (e) => {
+    const fileInput = e.target;
+    selectedFile = fileInput.files[0];
+    /*
+    console.log("selectedFile", selectedFile);
+    console.log("name", selectedFile.name);
+    console.log("size", selectedFile.size);
+    console.log("type", selectedFile.type);
+    */
   };
 
   const JsxInput = (item, key) => {
@@ -63,7 +82,8 @@ const Form = (props) => {
           {item.type === "range" && <span> {valInput} </span>}
         </label>
         <input
-          onInput={handleGetValue}
+          onInput={ item.type === "range" ? handleGetValue : undefined }
+          onChange={item.type === "file" ? handleFile : undefined}
           type={item.type}
           className="form-control"
           id={item.id}
@@ -172,15 +192,15 @@ const Form = (props) => {
         <br />
 
         {item.labels.map((label, i) => (
-          <div className="form-group form-check" key={item.name + i}>            
+          <div className="form-group form-check" key={item.name + i}>
             <div className={classPretty}>
               <input
                 type="checkbox"
                 id={label}
                 name={item.name}
                 onClick={handleGetCheck}
-              />              
-              <div className={colorClass}>              
+              />
+              <div className={colorClass}>
                 <label> {label} </label>
               </div>
             </div>

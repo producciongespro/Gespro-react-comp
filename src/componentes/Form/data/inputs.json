@@ -10,6 +10,14 @@
   },
   {
     "control": "input",
+    "id": "foto",
+    "type": "file",
+    "label": "foto",
+    "placeholder": "Suba su foto",    
+    "required": true
+  },
+  {
+    "control": "input",
     "id": "clave",
     "type": "password",
     "label": "Contraseña",

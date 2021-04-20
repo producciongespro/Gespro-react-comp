@@ -16,7 +16,7 @@ const imagenes = [
   }
 ];
 
-console.log(imagenes[0].urlImg);
+//console.log(imagenes[0].urlImg);
 
 const ContImagen = () => {
   return (
