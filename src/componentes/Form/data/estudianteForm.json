@@ -1,0 +1,28 @@
+[
+    {
+        "control": "input",
+        "id": "nombre",
+        "type": "text",
+        "label": "Nombre",
+        "placeholder": "Escriba su nombre",
+        "maxLength": 64,
+        "required": true
+      },
+      {
+        "control": "input",
+        "id": "correo",
+        "type": "email",
+        "label": "Correo",    
+        "placeholder": "Escriba su correo",
+        "maxLength": 64,
+        "required": true
+      },
+      {
+        "control": "input",
+        "id": "foto",
+        "type": "file",
+        "label": "foto",
+        "placeholder": "Foto del estudiante",    
+        "required": true
+      }
+]

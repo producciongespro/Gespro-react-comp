@@ -5,7 +5,6 @@ import "./css/form.css";
 import "./css/pretty-checkbox.min.css";
 
 let valoresCheck = [];
-let selectedFile=null;
 
 const handleGetCheck = (e) => {
   const item = e.target;
@@ -40,14 +39,8 @@ const Form = (props) => {
     if (valoresCheck) {
       if (valoresCheck.length > 0) {
         data.valoresCheck = valoresCheck;
-      }
-
-      //adjuntar archivo
-  /*
-      if (selectedFile) {
-        data.selectedFile = selectedFile;        
-      }
-      */
+      }    
+      
     }
     props.getDataForm(data);
   };
@@ -59,16 +52,7 @@ const Form = (props) => {
     setValInput(val);
   };
 
-  const handleFile = (e) => {
-    const fileInput = e.target;
-    selectedFile = fileInput.files[0];
-    /*
-    console.log("selectedFile", selectedFile);
-    console.log("name", selectedFile.name);
-    console.log("size", selectedFile.size);
-    console.log("type", selectedFile.type);
-    */
-  };
+ 
 
   const JsxInput = (item, key) => {
     return (
@@ -82,8 +66,7 @@ const Form = (props) => {
           {item.type === "range" && <span> {valInput} </span>}
         </label>
         <input
-          onInput={ item.type === "range" ? handleGetValue : undefined }
-          onChange={item.type === "file" ? handleFile : undefined}
+          onInput={ item.type === "range" ? handleGetValue : undefined }          
           type={item.type}
           className="form-control"
           id={item.id}

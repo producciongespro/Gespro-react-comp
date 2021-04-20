@@ -1,10 +1,33 @@
 import Form from "./Form";
 import controles from "./data/controles.json";
-//import chekboxes from "./data/chekboxes.json";
+import chekboxes from "./data/chekboxes.json";
 import inputs from "./data/inputs.json";
+import estudianteForm from "./data/estudianteForm.json";
 
-const getDataForm = (data) => {
-  console.log("Dataos a enviar al servidor", data);
+const URL_API = "http://localhost:3500/api/estudiantes";
+
+const sendData = async function (url, data) {
+  const resp = await fetch(url, {
+    method: "POST",
+    body: data    
+  });
+  let json = await resp.json();
+  return json;
+};
+
+const getDataForm = async (data) => {
+  //console.log("Dataos a enviar al servidor", data);
+
+  const formData = new FormData();
+  formData.append("foto", data.foto[0]);
+  formData.append("correo", data.correo);
+  formData.append("nombre", data.nombre);
+  console.log(formData);
+
+  console.log(data.correo);
+
+  const resp = await sendData(URL_API, formData);
+  console.log(resp);
 };
 
 /* 
@@ -16,7 +39,7 @@ const getDataForm = (data) => {
  */
 
 const ContForm = () => {
-  return <Form getDataForm={getDataForm} array={inputs} />;
+  return <Form getDataForm={getDataForm} array={estudianteForm} />;
 };
 
 export default ContForm;
