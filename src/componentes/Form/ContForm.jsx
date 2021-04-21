@@ -3,36 +3,26 @@ import controles from "./data/controles.json";
 import chekboxes from "./data/chekboxes.json";
 import inputs from "./data/inputs.json";
 import estudianteForm from "./data/estudianteForm.json";
+import {sendFormData} from "./utils";
 
 const URL_API = "http://localhost:3500/api/estudiantes";
 
-const sendData = async function (url, data) {
-  const resp = await fetch(url, {
-    method: "POST",
-    body: data    
-  });
-  let json = await resp.json();
-  return json;
-};
-
 const getDataForm = async (data) => {
-  //console.log("Dataos a enviar al servidor", data);
+  console.log("Dataos a enviar al servidor", data);
 
-  const formData = new FormData();
-  formData.append("foto", data.foto[0]);
-  formData.append("correo", data.correo);
-  formData.append("nombre", data.nombre);
-  console.log(formData);
+  const items = [
+    { name: "foto", val: data.foto[0] },
+    { name: "correo", val: data.correo },
+    { name: "nombre", val: data.nombre }
+  ];
 
-  console.log(data.correo);
-
-  const resp = await sendData(URL_API, formData);
+  const resp = await sendFormData(URL_API, items);
   console.log(resp);
 };
 
 /* 
 -Tipos de imputs testeados:
- *input types: text, password, date, number, email,  range, url
+ *input types: text, password, date, number, email,  range, url, file
  
  -Tipos de contorles admitidos:
   *control: input, textarea, select, chekbox
