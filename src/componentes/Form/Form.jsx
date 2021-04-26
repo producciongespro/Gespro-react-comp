@@ -34,25 +34,30 @@ const handleGetCheck = (e) => {
 
 const Form = (props) => {
   const [valInput, setValInput] = useState(null);
-  const { register, handleSubmit, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  //const { register, handleSubmit, errors } = useForm();
+  const msjError = "Item requerido";
+
   const onSubmit = (data) => {
     if (valoresCheck) {
       if (valoresCheck.length > 0) {
         data.valoresCheck = valoresCheck;
-      }    
-      
+      }
     }
     props.getDataForm(data);
   };
-  //console.log(errors);
+  console.log(errors);
+  console.log(errors.correo);
 
   const handleGetValue = (e) => {
     const val = e.target.value;
     //console.log(val);
     setValInput(val);
   };
-
- 
 
   const JsxInput = (item, key) => {
     return (
@@ -66,7 +71,7 @@ const Form = (props) => {
           {item.type === "range" && <span> {valInput} </span>}
         </label>
         <input
-          onInput={ item.type === "range" ? handleGetValue : undefined }          
+          onInput={item.type === "range" ? handleGetValue : undefined}
           type={item.type}
           className="form-control"
           id={item.id}
@@ -79,7 +84,10 @@ const Form = (props) => {
           max={item.max}
           step={item.step}
           defaultValue={item.defaultValue && item.defaultValue}
-          ref={register({ required: item.required })}
+          {...register(item.id, {
+            required: item.required,
+            maxLength: item.max,
+          })}
         />
       </div>
     );
@@ -103,7 +111,10 @@ const Form = (props) => {
           className="custom-select"
           name={item.id}
           id={item.id}
-          ref={register({ required: item.required })}
+          //ref={register({ required: item.required })}
+          {...register(item.id, {
+            required: item.required,
+          })}
         >
           <option value="">Seleccione una opción</option>
           {item.opts.map((opt) => (
@@ -140,7 +151,9 @@ const Form = (props) => {
           defaultValue={item.defaultValue}
           disabled={item.disabled}
           readOnly={item.readOnly}
-          ref={register({ required: item.required })}
+          {...register(item.id, {
+            required: item.required,
+          })}
         />
       </div>
     );
