@@ -9,7 +9,7 @@ export default function SocialTarjetas(params) {
   const configSocial = {
     fill: "#0ab3f2",
     fill2: "#ff5733", 
-    size: "medium"    
+    size: "small"    
   };
 
   const putLikesDislikes =(data)=> {
@@ -19,7 +19,7 @@ export default function SocialTarjetas(params) {
   return (
     <div className="row">
       {alimentos.map((item) => (
-        <div className="col-4" key={item.id}>
+        <div className="col-4 pb-3" key={item.id}>
           <div className="card">
             <div className="card-title">
               <h1>{item.titulo} </h1>

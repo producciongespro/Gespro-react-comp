@@ -25,6 +25,24 @@
     "likes": 1456,
     "dislikes": 20,
     "views": 23947
+  },
+  {
+    "id": "4",
+    "titulo": "Comida dietética",
+    "urlImg": "./png/food4.png",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar.",
+    "likes": 2689,
+    "dislikes": 465,
+    "views": 63589
+  },
+  {
+    "id": "5",
+    "titulo": "Para los adultos mayores",
+    "urlImg": "./png/food5.png",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar.",
+    "likes": 2689,
+    "dislikes": 465,
+    "views": 63589
   }
   
 ]
