@@ -7,6 +7,7 @@ import ContCalendario from './componentes/Calendario/ContCalendario';
 import ContForm from './componentes/Form/ContForm';
 import ContGModal from './componentes/Modal/ContGModal';
 import ContImagen from "./componentes/Imagen/ContImagen";
+import ContSocial from "./componentes/Social/ContSocial";
 
 
 
@@ -20,7 +21,7 @@ function App() {
           Funciones JS y componentes React JS
         </p>
       </div>      
-        <ContForm />
+        <ContSocial />
     </div>
   );
 }
