@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "titulo": "Deliciosa ensalada de frutas",
+    "urlImg": "./png/food1.png",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar.",
+    "likes": 456,
+    "dislikes": 10,
+    "views": 2569
+  },
+  {
+    "id": "2",
+    "titulo": "Canasta de frutas y legumbres",
+    "urlImg": "./png/food2.png",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar.",
+    "likes": 2758,
+    "dislikes": 356,
+    "views": 8762
+  },
+  {
+    "id": "3",
+    "titulo": "Alimentos saludables",
+    "urlImg": "./png/food3.png",
+    "descripcion": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, aecenas porttitor congue massa. Fusce posuere, magna sed pulvinar.",
+    "likes": 1456,
+    "dislikes": 20,
+    "views": 23947
+  }
+  
+]

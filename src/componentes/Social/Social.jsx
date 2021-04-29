@@ -10,14 +10,10 @@ export default function Social(props) {
   const conf = props.config;
   const item = props.item;
   const [likes, setLikes] = useState(props.item.likes);
-  const [enableLike, setEnableLike] = useState(true);
-
   const [dislikes, setDislikes] = useState(props.item.dislikes);
-  const [enableDislike, setEnableDislike] = useState(true);
-
   const [stateLike, setStateLike] = useState(false);
   const [stateDislike, setStateDislike] = useState(false);
-
+  
   const handleLikesDislikes = (e) => {
     const data = {
       id: item.id,
@@ -26,19 +22,19 @@ export default function Social(props) {
     };
     //console.log(e.currentTarget.id);
     //LIKES --------------------------------
-    if (e.currentTarget.id === "btnLike" && enableLike) {
+    if (e.currentTarget.id === "btnLike" ) {
       if (stateLike) {
         setStateLike(false);
         setLikes(props.item.likes);
         data.state = "like";
         data.value = -1;
       } else {
-        setStateLike(true);        
+        setStateLike(true);
         //coprueba si el dislike fue seleccionado antes
         if (stateDislike) {
-            setStateDislike(false);
-            //Se resetea el conteo de dislikes a su número original:        
-            setDislikes( props.item.dislikes);
+          setStateDislike(false);
+          //Se resetea el conteo de dislikes a su número original:
+          setDislikes(props.item.dislikes);
         }
 
         setLikes(props.item.likes + 1);
@@ -48,7 +44,7 @@ export default function Social(props) {
     }
 
     //DISLIKES ------------------
-    if (e.currentTarget.id === "btnDislike" && enableDislike) {
+    if (e.currentTarget.id === "btnDislike" ) {
       if (stateDislike) {
         setStateDislike(false);
         setDislikes(props.item.dislikes);
@@ -58,10 +54,10 @@ export default function Social(props) {
         setStateDislike(true);
         //coprueba si el like fue seleccionado antes
         if (stateLike) {
-            //Se deshabilita el like
-            setStateLike(false);    
-            //Se resetea el conteo de likes a su número original:        
-            setLikes( props.item.likes);
+          //Se deshabilita el like
+          setStateLike(false);
+          //Se resetea el conteo de likes a su número original:
+          setLikes(props.item.likes);
         }
         setDislikes(props.item.dislikes + 1);
         data.state = "dislike";
@@ -77,7 +73,7 @@ export default function Social(props) {
         id="btnLike"
         className="col-4 text-center"
         style={
-          stateLike ? { backgroundColor: "yellow", borderRadius: "25%" } : null
+          stateLike ? { backgroundColor: conf.background, borderRadius: "25%" } : null
         }
         role="button"
         onClick={handleLikesDislikes}
@@ -96,7 +92,7 @@ export default function Social(props) {
         className="col-4 text-center"
         style={
           stateDislike
-            ? { backgroundColor: "yellow", borderRadius: "25%" }
+            ? { backgroundColor: conf.background, borderRadius: "25%" }
             : null
         }
         role="button"

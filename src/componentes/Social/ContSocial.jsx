@@ -2,14 +2,15 @@ import Social from "./Social";
 
 const configSocial = {
   fill: "#ff5733",
-  size: "medium",
+  background: "#0ab3f2",
+  size: "medium"  
 };
 
 const item = {
   id: "123",
   likes: 125,
   dislikes: 32,
-  views: 4587,
+  views: 4587  
 };
 
 const putLikesDislikes = (data) => {
