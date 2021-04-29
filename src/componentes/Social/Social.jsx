@@ -5,6 +5,7 @@ https://primer.style/octicons/packages/react
 */
 import React, { useState } from "react";
 import { ThumbsupIcon, ThumbsdownIcon, EyeIcon } from "@primer/octicons-react";
+import "./vendor/animate.min.css";
 
 export default function Social(props) {
   const conf = props.config;
@@ -71,21 +72,19 @@ export default function Social(props) {
     <div className="row">
       <div
         id="btnLike"
-        className="col-4 text-center"
-        style={
-          stateLike ? { backgroundColor: conf.background, borderRadius: "25%" } : null
-        }
+        className="col-4 text-center"       
         role="button"
         onClick={handleLikesDislikes}
       >
         <ThumbsupIcon
           verticalAlign="middle"
+          className={stateLike ? "animate__animated animate__bounce" : null }
           size={conf.size}
-          fill={conf.fill}
+          fill={stateLike ?  conf.fill2 :  conf.fill}
           aria-label="me gusta"
         />
         <br />
-        <span style={{ color: conf.fill }}> {likes}</span>
+        <span style={ stateLike ?  { color: conf.fill2 } : { color: conf.fill }  } > {likes}</span>
       </div>
       <div
         id="btnDislike"
@@ -100,12 +99,13 @@ export default function Social(props) {
       >
         <ThumbsdownIcon
           verticalAlign="middle"
+          className={stateDislike ? "animate__animated animate__flip" : null }
           size={conf.size}
-          fill={conf.fill}
+          fill={ stateDislike ?  conf.fill2 : conf.fill }
           aria-label="no me gusta"
         />
         <br />
-        <span style={{ color: conf.fill }}> {dislikes}</span>
+        <span style={ stateDislike ?   {  color: conf.fill2 }  : {  color: conf.fill }   }> {dislikes}</span>
       </div>
       <div className="col-4 text-center">
         <EyeIcon size={conf.size} fill={conf.fill} aria-label="vistas" />

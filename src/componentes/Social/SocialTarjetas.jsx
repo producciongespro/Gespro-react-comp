@@ -4,11 +4,12 @@ import alimentos from "./alimentos.json";
 console.log(alimentos);
 
 export default function SocialTarjetas(params) {
+  //size: "small - medium - large"    
+  //fill: defualt color / fill2: highlighted color
   const configSocial = {
-    fill: "#ff5733",
-    background: "#0ab3f2",
-    size: "medium",
-    maxTimes: 3,
+    fill: "#0ab3f2",
+    fill2: "#ff5733", 
+    size: "medium"    
   };
 
   const putLikesDislikes =(data)=> {

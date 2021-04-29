@@ -22,7 +22,7 @@ function App() {
           Funciones JS y componentes React JS
         </p>
       </div>      
-        <SocialTarjetas />
+        <ContSocial />
     </div>
   );
 }
