@@ -5,7 +5,7 @@ https://primer.style/octicons/packages/react
 */
 import React, { useState } from "react";
 import { ThumbsupIcon, ThumbsdownIcon, EyeIcon } from "@primer/octicons-react";
-import "./social.css";
+
 
 export default function Social(props) {
   const conf = props.config;
@@ -14,6 +14,7 @@ export default function Social(props) {
   const [enableLike, setEnableLike] = useState(true);
   const [dislikes, setDislikes] = useState(props.item.dislikes);
   const [enableDislike, setEnableDislike] = useState(true);
+  const [highlighted, setHighlighted] = useState(null);
 
   const handleLikesDislikes = (e) => {
     const data = {
@@ -24,14 +25,26 @@ export default function Social(props) {
     if (e.currentTarget.id === "btnLike" && enableLike) {
       data.value = "like";
       setLikes(props.item.likes + 1);
-      setEnableLike(false);
+      setEnableLike(false); 
+      setHighlighted("like");
       props.putLikesDislikes(data);
+      //Si previamente fue clickeado un dislike:
+      if (!enableDislike) {        
+        setDislikes(dislikes - 1);
+      }
+
     }
     if (e.currentTarget.id === "btnDislike" && enableDislike) {
       data.value = "dislike";
       setDislikes(props.item.dislikes + 1);
-      setEnableDislike(false);
+      setEnableDislike(false);     
+      setHighlighted("dislike"); 
       props.putLikesDislikes(data);
+        //Si previamente fue clickeado un like:
+        if (!enableLike) {                    
+            setLikes(likes - 1);
+          }
+
     }
   };
 
@@ -40,7 +53,7 @@ export default function Social(props) {
       <div
         id="btnLike"
         className="col-4 text-center"
-        style={!enableLike ? { backgroundColor: 'yellow', borderRadius:'25%' } : null}
+        style={highlighted === "like" ? { backgroundColor: 'yellow', borderRadius:'25%' } : null}
         role="button"
         onClick={handleLikesDislikes}
       >
@@ -55,7 +68,8 @@ export default function Social(props) {
       </div>
       <div
         id="btnDislike"
-        className="col-4"
+        className="col-4 text-center"
+        style={highlighted === "dislike" ? { backgroundColor: 'yellow', borderRadius:'25%' } : null}
         role="button"
         onClick={handleLikesDislikes}
       >
@@ -68,7 +82,7 @@ export default function Social(props) {
         <br />
         <span style={{ color: conf.fill }}> {dislikes}</span>
       </div>
-      <div className="col-4">
+      <div className="col-4 text-center">
         <EyeIcon size={conf.size} fill={conf.fill} aria-label="vistas" />
         <br />
         <span style={{ color: conf.fill }}> {item.views}</span>
