@@ -18,8 +18,8 @@ export default function Social(props) {
   const handleLikesDislikes = (e) => {
     const data = {
       id: item.id,
-      value: null,
-      state: null,
+      like: 0,
+      dislike: 0,
     };
     //console.log(e.currentTarget.id);
     //LIKES --------------------------------
@@ -27,8 +27,7 @@ export default function Social(props) {
       if (stateLike) {
         setStateLike(false);
         setLikes(props.item.likes);
-        data.state = "like";
-        data.value = -1;
+        data.like = -1;        
       } else {
         setStateLike(true);
         //coprueba si el dislike fue seleccionado antes
@@ -36,11 +35,11 @@ export default function Social(props) {
           setStateDislike(false);
           //Se resetea el conteo de dislikes a su número original:
           setDislikes(props.item.dislikes);
+          data.dislike = -1;
         }
 
-        setLikes(props.item.likes + 1);
-        data.state = "like";
-        data.value = 1;
+        setLikes(props.item.likes + 1);        
+        data.like = 1;
       }
     }
 
@@ -48,9 +47,8 @@ export default function Social(props) {
     if (e.currentTarget.id === "btnDislike" ) {
       if (stateDislike) {
         setStateDislike(false);
-        setDislikes(props.item.dislikes);
-        data.state = "dislike";
-        data.value = -1;
+        setDislikes(props.item.dislikes);        
+        data.dislike = -1;
       } else {
         setStateDislike(true);
         //coprueba si el like fue seleccionado antes
@@ -59,10 +57,10 @@ export default function Social(props) {
           setStateLike(false);
           //Se resetea el conteo de likes a su número original:
           setLikes(props.item.likes);
+          data.like = -1;
         }
-        setDislikes(props.item.dislikes + 1);
-        data.state = "dislike";
-        data.value = 1;
+        setDislikes(props.item.dislikes + 1);        
+        data.dislike = 1;
       }
     }
     props.putLikesDislikes(data);

@@ -1,7 +1,7 @@
 import Social from "./Social";
 import alimentos from "./alimentos.json";
 
-console.log(alimentos);
+//console.log(alimentos);
 
 export default function SocialTarjetas(params) {
   //size: "small - medium - large"    
