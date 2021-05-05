@@ -2,6 +2,8 @@ import Social from "./Social";
 
   //size: "small - medium - large"    
   //fill: defualt color / fill2: highlighted color
+
+  //otro comentario de demo
   const configSocial = {
     fill: "#0ab3f2",
     fill2: "#ff5733", 

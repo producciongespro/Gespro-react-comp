@@ -10,7 +10,7 @@ import ContImagen from "./componentes/Imagen/ContImagen";
 import ContSocial from "./componentes/Social/ContSocial";
 import SocialTarjetas from "./componentes/Social/SocialTarjetas";
 
-
+//Demostración a compañeros!!!
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
         </p>
       </div>      
         <ContSocial />
+        
     </div>
   );
 }
