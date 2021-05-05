@@ -2,6 +2,8 @@
 Referencia de librería octicons: (utilizada para generear iconos)
 https://primer.style/octicons/
 https://primer.style/octicons/packages/react
+
+npm install @primer/octicons-react
 */
 import React, { useState } from "react";
 import { ThumbsupIcon, ThumbsdownIcon, EyeIcon } from "@primer/octicons-react";
