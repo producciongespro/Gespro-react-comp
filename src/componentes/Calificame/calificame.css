@@ -1,0 +1,47 @@
+.p {
+  height: 2em;
+  width: auto;
+}
+
+.m {
+  height: 4em;
+  width: auto;
+}
+
+.g {
+    height: 7em;
+    width: auto;
+  }
+
+.flotante-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.flotante-2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.flotante-3 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.flotante-4 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+
+.calificador {
+    z-index: 9999;
+}
+
+.calificador:hover {
+    transform: scale(1.2, 1.2);
+}
